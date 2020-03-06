@@ -19,6 +19,13 @@ export class AppComponent {
  )
 
   {
+
+    if ( JSON.parse( localStorage.getItem('cart')) === null ){
+
+      localStorage.setItem('cart', JSON.stringify([]) );
+    }
+
+
         // Load LocalStorage in every page
     this.router.events.subscribe((e) => {
         if (e instanceof NavigationEnd) {

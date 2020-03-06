@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
       console.log(form);
 
       if ( form.valid ){
+   
         // Token and data from Firebase
         this.logregService.login(this.user)
         .subscribe( resp => console.log(resp));
