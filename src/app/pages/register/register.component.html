@@ -1,0 +1,32 @@
+<h1>
+
+    Register</h1>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+
+                <form (ngSubmit)="signUp(f)" #f="ngForm">
+
+                    <div class="form-group">
+                        <div>
+                            <label for="">Name</label>
+                            <input class="form-control" [(ngModel)]="user.name" name="name" type="text">
+                        </div>
+                        <div>
+                            <label for="">Email</label>
+                            <input class="form-control" [(ngModel)]="user.email" name="email" type="email">
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input class="form-control" [(ngModel)]="user.password" name="password" type="password">
+                        </div>
+
+                    </div>
+                    <button class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

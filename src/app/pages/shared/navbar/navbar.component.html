@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a routerLink="/home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li *ngIf=" loggedIn == false " class="nav-item">
+                <a routerLink="/login" class="nav-link" href="#">Login</a>
+            </li>
+            <li *ngIf=" loggedIn !== true " class="nav-item">
+                <a routerLink="/register" class="nav-link" href="#">Register</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/addproduct" class="nav-link" href="#">Add Product</a>
+            </li>
+            <li class="nav-item li-cart">
+                <!-- <app-cart-total (cambiarValor)="prueba( $event )" [cartTotal]="itemsTotal"> </app-cart-total> -->
+                <div routerLink="/cart" class="cart-btn">
+                    <span class="nav-icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </span>
+                    <div class="cart-items"> {{ itemsTotal }} </div>
+                </div>
+            </li>
+            <li *ngIf="loggedIn !== false ">
+                <button (click)="logout()" class="btn btn-danger">Logout</button>
+            </li>
+            <li>
+                <!-- <label for=""> {{ user.rol }} </label> -->
+            </li>
+        </ul>
+        <!-- <label for=""> {{loggedIn}} </label> -->
+
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>
+    </div>
+</nav>

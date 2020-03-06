@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* .navbar li .li-cart {
+    display: block;
+    position: relative;
+    padding: 3px;
+    border: #000 1px solid;
+}
+
+.navbar li .li-cart .fa-cart {
+    display: block;
+    margin: 0 auto;
+    border: #aaa 1px solid;
+    width: 100px;
+    float: left;
+} */
+
+.nav-icon {
+    font-size: 1.5rem;
+}
+
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-items {
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    background: rgb(44, 193, 212);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: beige;
+}
